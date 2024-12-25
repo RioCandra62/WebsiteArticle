@@ -14,7 +14,7 @@
         <div>
             <p class="font-semibold text-xl">Rio Candra Indrawan</p>
         </div>
-        <div class="flex flex-row space-x-12 text-xl " style="font-family: DM Serif Text, serif;">
+        <div class="lg:flex flex-row space-x-12 text-xl hidden" style="font-family: DM Serif Text, serif;">
             <a href="">Home</a>
             <a href="">Introduction</a>
             <a href="">History</a>
@@ -22,44 +22,45 @@
         </div>
     </div>
     <div class="flex flex-col">
-        <div class=" h-[500px]  bg-contain bg-repeat bg-center" style="background-image: url('https://www.bluehost.com/blog/wp-content/smush-webp/2021/09/An-Introduction-to-website-structuring.png.webp');">
+        <div class=" lg:h-[500px] h-[220px] bg-contain bg-repeat bg-center" style="background-image: url('https://www.bluehost.com/blog/wp-content/smush-webp/2021/09/An-Introduction-to-website-structuring.png.webp');">
         </div>
-        <div class="ml-[15pc] flex flex-col">
-            <p class="text-[64px]" style="font-family: DM Serif Text, serif;">The Backbone of Modern Website</p>
+        <div class="xl:ml-[10pc] ml-[15px] flex flex-col">
+            <p class="lg:text-[64px] text-[44px]" style="font-family: DM Serif Text, serif;">The Backbone of Modern Website</p>
             <p class="-mt-4">Implementation of HTML, CSS dan JavaScript</p>
         </div>
    
         <!-- Introduction -->
-        <div class="flex flex-col space-y-24 mx-[15pc] mt-[35px] pb-[50px]">
+        <div class="flex flex-col space-y-24 xl:mx-[10pc] mx-[15px] mt-[35px] pb-[50px]">
             <div class="flex flex-col">
-                <p class="text-3xl font-semibold ">Introduction</p>
-                <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
+                <p class="lg:text-3xl text-2xl font-semibold ">Introduction</p>
+                <p class="mt-4 mx-8 lg:mx-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
             </div>
             <div class="flex flex-col">
-                <div class="flex flex-row">
-                    <div class="flex flex-col w-1/2 space-y-4">
-                        <p class="text-3xl font-semibold ">History</p>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
+                <div class="flex lg:flex-row space-x-5 flex-col">
+                    <div class="flex flex-col lg:w-1/2 space-y-4">
+                        <p class="lg:text-3xl text-2xl font-semibold ">History</p>
+                        <p class="mx-8 lg:mx-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
                     </div>
-                    <div class="w-1/2 bg-red-500 bg-cover h-[20pc]" style="background-image: url('assets/img.jpg');">
+                    <div class="lg:w-1/2 bg-red-500 bg-contain h-[20pc]" style="background-image: url('assets/img.jpg');">
                         
                     </div>
                 </div>
             </div>
             <div class="flex flex-col space-y-8">
-                <p id="imp" class="text-4xl font-semibold text-center ">Implementation</p>
-                <div class="flex flex-row space-x-8">
-                    <div class="w-1/2 bg-red-500 bg-cover h-[20pc]" style="background-image: url('assets/code.png');">
-                        
+                <p id="imp" class="lg:text-4xl text-2xl font-semibold text-center ">Implementation</p>
+                <div class="flex xl:flex-row flex-col space-x-8">
+                    <div class="xl:w-1/2 bg-contain bg-no-repeat xl:h-[25pc] md:h-[30pc] sm:h-[300px] h-[190px]" style="background-image: url('assets/code.png');">
                     </div>
-                    <div class="flex flex-col w-1/2 space-y-4">
-                        <p class="text-3xl font-semibold ">What is HTML ?</p>
+                    <div class="flex flex-col xl:w-1/2  space-y-4 mt-4 xl:mt-0">
+                        <p class="lg:text-3xl text-2xl font-semibold">What is HTML ?</p>
                         <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
                     </div>
                     
                 </div>
-                <p class="text-3xl font-semibold ">Structur and Implementation HMTL</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in laborum exercitationem eius soluta illo commodi aut placeat qui ad sequi sunt voluptas distinctio nulla fugiat, rerum dolorum! Perspiciatis pariatur, omnis dignissimos cum laborum veritatis placeat non nam deserunt deleniti ullam nihil expedita tempore. Corporis repellat labore quae eius nam vitae velit atque illum harum consectetur ut deserunt suscipit adipisci iusto, ea obcaecati aut a veritatis animi laboriosam, pariatur aliquid tempore reprehenderit assumenda? Eum, iste animi! Expedita, quae quas? Error, ea iste quaerat similique, delectus reiciendis incidunt debitis atque corrupti tempora officia a! Accusantium recusandae vero, eligendi velit maxime nulla.</p>
+                <div class="mx-8 xl:mx-0 flex-col space-y-4">
+                    <p class="lg:text-3xl text-2xl font-semibold ">Structur and Implementation HMTL</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in laborum exercitationem eius soluta illo commodi aut placeat qui ad sequi sunt voluptas distinctio nulla fugiat, rerum dolorum! Perspiciatis pariatur, omnis dignissimos cum laborum veritatis placeat non nam deserunt deleniti ullam nihil expedita tempore. Corporis repellat labore quae eius nam vitae velit atque illum harum consectetur ut deserunt suscipit adipisci iusto, ea obcaecati aut a veritatis animi laboriosam, pariatur aliquid tempore reprehenderit assumenda? Eum, iste animi! Expedita, quae quas? Error, ea iste quaerat similique, delectus reiciendis incidunt debitis atque corrupti tempora officia a! Accusantium recusandae vero, eligendi velit maxime nulla.</p>
+                </div>
             </div>
 
         </div>
