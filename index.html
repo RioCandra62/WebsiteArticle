@@ -6,64 +6,321 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9742/9742280.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+    <title>The Backbone of Modern Website</title>
 </head>
-<body class="">
-    <div class="flex flex-row justify-between px-12 shadow-lg py-6 sticky top-0 bg-white">
+<body class="bg-sky-50">
+    <div class="flex flex-row justify-between px-12 shadow-lg py-6 sticky top-0 bg-white z-50">
         <div>
             <p class="font-semibold text-xl">Rio Candra Indrawan</p>
         </div>
         <div class="lg:flex flex-row space-x-12 text-xl hidden" style="font-family: DM Serif Text, serif;">
-            <a href="">Home</a>
-            <a href="">Introduction</a>
-            <a href="">History</a>
-            <a href="#imp">Implementation</a>
+            <button id="home">Home</button>
+            <button id="introBtn">Introduction</button>
+            <button id="impBtn">Implementation</button>
+            <button id="footerBtn">About</button>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $("#introBtn").click(function(){
+                $("html, body").animate({
+                    scrollTop: $("#intro").offset().top - 130
+                }, 2500);
+            });$("#footerBtn").click(function(){
+                $("html, body").animate({
+                    scrollTop: $("#footer").offset().top - 0
+                }, 1500);
+            }); ;$("#impBtn").click(function(){
+                $("html, body").animate({
+                    scrollTop: $("#imp").offset().top - 115
+                }, 1500);
+            }); $("#home").click(function(){
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 2500);
+            });
+        });
+    </script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const links = document.querySelectorAll("a[href^='#']");
+      
+          links.forEach(link => {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute("href").slice(1);
+              const targetElement = document.getElementById(targetId);
+      
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop,
+                  behavior: "smooth"
+                });
+              }
+            });
+          });
+        });
+    </script> -->
     <div class="flex flex-col">
         <div class=" lg:h-[500px] h-[220px] bg-contain bg-repeat bg-center" style="background-image: url('https://www.bluehost.com/blog/wp-content/smush-webp/2021/09/An-Introduction-to-website-structuring.png.webp');">
         </div>
         <div class="xl:ml-[10pc] ml-[15px] flex flex-col">
-            <p class="lg:text-[64px] text-[44px]" style="font-family: DM Serif Text, serif;">The Backbone of Modern Website</p>
-            <p class="-mt-4">Implementation of HTML, CSS dan JavaScript</p>
+            <p class="lg:text-[64px] text-[44px] md:text-left text-center" style="font-family: DM Serif Text, serif;">The Backbone of Modern Website</p>
+            <p class="-mt-4 text-center sm:text-left">Implementation of HTML, CSS dan JavaScript</p>
         </div>
    
         <!-- Introduction -->
-        <div class="flex flex-col space-y-24 xl:mx-[10pc] mx-[15px] mt-[35px] pb-[50px]">
-            <div class="flex flex-col">
+        <div class="flex flex-col sm:space-y-24 space-y-6 xl:mx-[10pc] sm:mx-[15px]  mt-[35px] pb-[50px] sm:p-12 p-6 shadow-lg rounded-xl bg-white">
+            <div id="intro" class="flex flex-col ">
                 <p class="lg:text-3xl text-2xl font-semibold ">Introduction</p>
-                <p class="mt-4 mx-8 lg:mx-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
+                <p class="mt-4 sm:mx-8 lg:mx-0 indent-8">Di era digital ini peran sebuah website menjadi kebutuhan penting bagi setiap kebutuhan, baik dalam keperluan bisnis seperti pemasaran,penjualan barang dan jasa,  penyampaian informasi, dan masih banyak lagi, Sehingga peran website sangatlah penting.Untuk membuat dan mengembangkan website digunakanlah 3 bahasa pemerograman utama ya itu Hypertext Markup Language (HTML), Cascading Style Sheet (CSS), dan Javascript sebagai penunjang utama pembuatan website. </p>
             </div>
             <div class="flex flex-col">
                 <div class="flex lg:flex-row space-x-5 flex-col">
-                    <div class="flex flex-col lg:w-1/2 space-y-4">
+                    <div class="flex flex-col lg:w-1/2 space-y-4 sm:p- rounded-xl">
                         <p class="lg:text-3xl text-2xl font-semibold ">History</p>
-                        <p class="mx-8 lg:mx-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
+                        <p class="sm:mx-8 lg:mx-0 text-justify indent-8">Sejarah Website pertama kali diluncurkan tahun 1991, webiste tersebut bernama <a class="hover:" href="https://info.cern.ch/">info.cern.ch</a>yang diperkenalkan oleh ilmuan dari Cern Swiss yang bernama <i>Tim Berners-Lee</i> melalui World Wide Web (WWW). pada awal diperkenalkan nya, website hanya terdiri dari text sederhana, namum seiiring dengan perkembangan teknologi, diperkenalkan lah CSS dan Javascript sehingga pada website modern tidak hanya menampilkan text, namun juga berbagai media seperti gambar, video serta terdapat berbagai macam animasi dan transisi serta di perkenlakan juga website responsive yang dapat menyesuaikan tampilan dengan ukuran perangkat. </p>
                     </div>
-                    <div class="lg:w-1/2 bg-red-500 bg-contain h-[20pc]" style="background-image: url('assets/img.jpg');">
+                    <div class="lg:w-1/2 bg-contain bg-no-repeat h-[15pc]" style="background-image: url('assets/img.jpg');">
                         
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col space-y-8">
-                <p id="imp" class="lg:text-4xl text-2xl font-semibold text-center ">Implementation</p>
-                <div class="flex xl:flex-row flex-col space-x-8">
-                    <div class="xl:w-1/2 bg-contain bg-no-repeat xl:h-[25pc] md:h-[30pc] sm:h-[300px] h-[190px]" style="background-image: url('assets/code.png');">
+            <div class="flex flex-col space-y-4" id="imp">
+                <p id="imp" class="lg:text-4xl text-2xl font-semibold text-center ">Implementation </p>
+                <div class="flex xl:flex-row flex-col xl:space-x-8 ">
+                    <div class="xl:w-1/2 bg-contain bg-no-repeat xl:h-[20pc] md:h-[30pc] sm:h-[300px] h-[190px]" style="background-image: url('assets/code.png');">
                     </div>
-                    <div class="flex flex-col xl:w-1/2  space-y-4 mt-4 xl:mt-0">
+                    <div class="flex flex-col xl:w-1/2  space-y-4 mt-4 xl:mt-0 ">
                         <p class="lg:text-3xl text-2xl font-semibold">What is HTML ?</p>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nobis reprehenderit? Rem blanditiis aperiam, explicabo quidem quaerat minima. Inventore totam reiciendis iure error quae aspernatur reprehenderit nostrum tenetur facilis, unde nesciunt quis quaerat maxime expedita, quasi officiis fuga atque accusamus deserunt nobis porro ipsam ducimus. Adipisci quae praesentium nesciunt assumenda nulla, hic beatae porro fuga. Facilis nostrum velit sit aut dolorem culpa in laborum alias dolores vel nisi quia similique qui, placeat aperiam et expedita autem earum necessitatibus voluptatem eveniet rem. Omnis fuga consequatur facere est sapiente accusantium unde! Esse perferendis, dicta reiciendis debitis ab tempora veniam modi corporis distinctio.</p>
+                        <p class="indent-8">HTML Adalah Hypertext Markup Language yang merupakan struktur dasar dalam pembuatan website modern. Sejak peluncuran website pertama di dunia oleh ilmuan asal Swiss hingga saat ini versi versi HTML terus di kembangkan, dimuali dari versi HTML 1.0 yang hanya terdapat 18 tag seperti tag p untuk paragraf, a untuk link, img untuk menampilkan gambar, dan h yang terdiri dari h1 hingga h6 untuk menentukan ukuran text, hingga versi terbaru saat ini yaitu versi HTML 5.2 yang telah mendukung fitur fitur modern seperti penambahan dukungan untuk multimedia, hingga tersedia nya fitur grafik dan animasi.</p>
                     </div>
                     
                 </div>
+                <div class="xl:mx-8 xl:mx-0 flex-col space-y-4">
+                    <p class="lg:text-3xl text-2xl font-semibold ">HTML Structure</p>
+                    <p class="indent-8">HTML terdiri dari elemen elemen penyusun yang disebut juga dengan tag html, penggunaan tag html diawali dengan tag pembuka dan diakhiri pula dengan tag penutup, pada umum nya html tersusun dari tag doctype, jenis bahasa, head, dan body. tag doctype bertujuan untuk mendifinisikan jenis file menjadi jenis HTML, tag bahasa digunakan untuk mendefinisikan bahasa yang ingin diginakan dalam struktur html, tag head bertujuan sebagai identitas dari HTML, tag head umum nya berisi judul website tipe karakter set yang menggunakan UTF-8 serta tag meta yang bertujuan untuk menyesuaikan ukuran website ke device pengguna.</p>
+                    <p class="indent-8">Selanjutnya tag utama dalam HTML yaitu tag Body, yang merupakan tempat untuk meletakan isi content dari website. Dalam tag ini terdapat banyak sekali tag yang menunjang keperluan dari website tersebut dimulai dari tag p yang berfungsi untuk menampilkan text hingga text img yang dapat menampilkan media seperti gambar dan masih banyak lagi. dengan HTML 5 versi terbaru terdapat tag iframe yang berguna untuk menampilkan kontent dari website lain dengan demikian user dapat menempatkan potongan maps yang telah di sediakan oleh google maps.</p>
+        
+                    
+                </div>
+            </div>
+            <div class="flex flex-col space-y-8">
+                <p id="imp" class="lg:text-4xl text-2xl font-semibold">Cascading Style Sheet</p>
+                <div class="flex flex-col shadow-xl p-12 rounded-lg bg-sky-50">
+                    <p class="lg:text-3xl text-2xl font-semibold">What is CSS ?</p>
+                    <p class="indent-8">CSS adalah Cascading Style Sheet yang berutujuan untuk menambahkan desain ke dalam website, tentu saja website yang hanya berisi text akan membosankan dan kurang menarik untuk di buat, oleh karna itu digunakanlah CSS untuk memperbaiki tampilan dari website. CSS pertama kali rilis pada tanggal 17 Desember 1996 dengan versi CSS1 yang memiliki fitur utama berupa color, font dan text-align hinga pada saat ini CSS telah berkembang menjadi CSS 3 yang mendukung media query sehingga memungkinkan untuk pembuatan website secara responsive, serta terdapat dukungan untuk animasi dan transisi</p>
+                </div>
+                <div class="flex xl:flex-row flex-col xl:space-x-[50px]  mt-5">
+                    <div class="flex flex-col xl:w-2/5 space-y-12">
+                        <div class="flex flex-col space-y-4 mt-4 xl:mt-0 ">
+                            <p class="lg:text-3xl text-2xl font-semibold">How Do You Use CSS</p>
+                            <p class="indent-8">CSS dapat digunakan dengan beberapa cara yaitu secara inline, internal dan juga eksternal.Penggunaan CSS secara Inline yaitu menempatkan css pada setiap tag HTML dengan cara menggunakan style yang diikuti dengan pemanggilan tag CSS yang ingin digunakan. Penggunakan CSS secara inline yaitu tetap menempatkan CSS pada file HTML namum penemempatan nya terletak pada body dan diawali dengan tag style, berbeda dengan inline CSS untuk menerapkan CSS pada tag html tertentu maka digunakan lah id dan class pada tag HTML tersebut. kemudian penggunaan CSS external yaitu menempatkan CSS pada file terpisah dengan file HTML sehingga mempersingkat kode di dalam satu file.</p>
+                        </div>
+                        <div class="flex flex-col space-y-4 mt-4 xl:mt-0 ">
+                            <p class="lg:text-3xl text-2xl font-semibold">CSS Structure</p>
+                            <p class="">Struktur dari CSS tidak jauh berbeda dari struktur HTML, dimana tag yang akan di beri CSS di panggil dengan mendahului titik untuk pemanggilan class dan pagar (#) untuk memanggil id gari tag tertentu setelah itu diikuti dengan kurung kurawal dan isi dari berbagai tag CSS yang akan digunakan.</p>
+                        </div>
+                    </div>
+                    <div class="xl:w-3/5  bg-contain xl:mx-auto bg-no-repeat xl:h-[40pc] md:w-[40pc] md:h-[50pc] md:mt-0 mt-4 h-[26pc]" style="background-image: url('assets/css.png');">
+                    </div>
+                </div>
                 <div class="mx-8 xl:mx-0 flex-col space-y-4">
-                    <p class="lg:text-3xl text-2xl font-semibold ">Structur and Implementation HMTL</p>
+                    <p class="lg:text-3xl text-2xl font-semibold ">CSS Framework</p>
+                    <p class="text-justify md:text-left">Untuk memudahkan user dalam menggunakan CSS maka dibuatlah Framework CSS, framework css adalah sebuah kerangka yang telah di kembangkan oleh pihak tertentu, sehingga dalam penggunaan nya user hanya perlu memanggil class yang telah ada dengan penggunaan framework ini memungkinkan untuk hanya memilki 1 file html, pada saat ini terdapat banyak sekali pihak yang menyediakan framework framework CSS sehingga para developer dapat memilihi sesuai dengan keiinginan dan kebutuhan website yang dikembangkan.<p>
+                </div>
+                <div class="h-96 bg-contain bg-center bg-no-repeat" style="background-image: url('https://miro.medium.com/v2/resize:fit:1024/1*JiQQ1VFygcO2gGQKUypjTQ.jpeg')"></div>
+                 <div class="xl:grid xl:grid-cols-3 flex flex-col space-y-6 lg:space-y-0 gap-3">
+                    <a target="_blank" href="https://tailwindcss.com/" class="flex flex-col  text-center shadow-lg   p-6 rounded-xl hover:bg-sky-50">
+                        <div class="h-[120px] w-[220px] bg-cover bg-center bg-no-repeat mx-auto" style="background-image: url('https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/05/02024759/tailwind-css7675.logowik.com.webp');"></div>
+                        <p class="lg:text-[24px] text-xl mb-4">Tailwind CSS</p>
+                        <p class="mx-6 text ">Tailwind CSS merupakan tipe framework css yang menerapkan utility-fisrt Framework, yaitu menyediakan utilitas utilitas kecil yang dapat lnagusng di implementasikan kedalam tag html dengan cara memanggilnya ke dalam class yang ada di tag html </p>
+                    </a>
+                    <a target="_blank" href="https://getbootstrap.com/" class="flex flex-col text-center shadow-lg   p-6 rounded-xl hover:bg-sky-50">
+                        <div class="h-[120px] w-[220px] bg-contain bg-no-repeat mx-[4pc] " style="background-image: url('assets/bs.png');"></div>
+                        <p class="lg:text-[24px] text-xl mb-4">Boostrap</p>
+                        <p class="mx-6 text  text-center">Merupakan framework css yang sangat populer digunakan karena simplisitasnya, Boostrap menyediakan komponen komponen siap pakai sehingga para developer hanya perlu memanggilnya saja ke dalam file HTML</p>
+                    </a>
+                    <a target="_blank" href="https://getuikit.com/" class="flex flex-col text-center shadow-lg   p-6 rounded-xl hover:bg-sky-50">
+                        <div class="h-[120px] w-[220px] bg-contain bg-no-repeat mx-[4pc] " style="background-image: url('assets/uikit.png');"></div>
+                        <p class="lg:text-[24px] text-xl mb-4">UIKIT</p>
+                        <p class="mx-6 text  text-center">UIKit merupakan framework CSS yang dikembangkan menggunakan pendekatan mobile-first, dengan demikian UIKIT dapat menyesuaikan diri dengan setiap perangkat baik komputer maupun handphone. UIKIT juga mendukung fitur ui yang efisien dan responsive</p>
+                    </a>
+        
+                 </div>
+            </div>
+            <!---JS------>
+            <div class="flex flex-col space-y-8">
+                <p id="imp" class="lg:text-4xl text-2xl font-semibold">JavaScript</p>
+                <div class="flex md:flex-row flex-col md:h-[15pc] text-center ">
+                    <div class="bg-cover bg-no-repeat xl:bg-right bg-bottom xl:rounded-l-xl rounded-t-xl xl:h-full h-[15pc] xl:w-1/5 lg:w-3/12" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png');"></div>
+                    <div class="flex flex-col xl:w-4/5 lg:w-9/12 shadow-xl xl:space-y-4 xl:p-6 p-8 rounded-r-xl bg-sky-50">
+                        <p class="lg:text-3xl text-2xl font-semibold">What is JavaScript ?</p>
+                        <p>JavaScript adalah bahasa pemerograman berorientasi object (PBO) yang digunakan untuk mendukung fungsionalitas website, Javascript menawarkan banyak sekali fitur diantara nya dalah fitur interativitas yang dinamis, dimana pengguna dapat berinteraksi dengan website tanpa harus memuat ulang, selain itu juga Javascript merubah struktur HTML dan CSS sehingga website dapat berubah dan menyesuaikan, selain itu juga Javascript dapat digunakan untuk menambahkan animasi dan transisi pada website, sehingga website tersebut akan terlihat lebih dinamis</p>
+                    </div>
+                </div>
+                <div class="flex xl:flex-row flex-col xl:space-x-[40px] mt-5">
+                    <div class="xl:w-1/2 bg-contain bg-no-repeat xl:h-[15pc] md:h-[30pc] sm:h-[300px] h-[15pc]" style="background-image: url('assets/js2.png');">
+                    </div>
+                    <div class="flex flex-col xl:w-1/2 ">
+                        <div class="flex flex-col  mt-4 xl:mt-0 ">
+                            <p class="lg:text-3xl text-2xl font-semibold">How Do You Use JavaScript</p>
+                            <p class="">Penggunaan Javascript sama hal nya dengan penggunaan CSS dimana terdapat 2 cara penemempatannya yaitu internal dan external. Penggunaan secara internal yaitu meletakan script di dalam file HTML dengan menggunakan tag script diikuti dengan penulisan Javascript. Contoh syntax Javascript di samping merupakan contoh penerapan Javascript secara external dimana syntax Javascript diletakan pada file terpisah dan di panggil ke dalam file html melalui link yang terletak pada tag head.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4 mt-4 xl:mt-0 ">
+                    <p class="lg:text-3xl text-2xl font-semibold">Why you should Use JavaScript</p>
+                    <p class="">Seiring berkembangnya dunia Digital peran Javascript sangat penting dalam suatu website, yang dimana penambahan animasi dan transisi tidak hanya mempercantik sebuah website namun juga menjadi daya tarik agar website tersebut banyak dikunjungi oleh pengguna internet, selain itu dengan pengimplementasian JavaScript akan membuat website menjadi interaktive sehingga lebih memudahkan para pengguna untuk memahami informasi yang ditampilkan pada website tersebut.</p>
+                </div>
+                <div class="flex xl:flex-row flex-col xl:h-[30pc] lg:h-[50pc]  lg:space-y-5">
+                    <div class="flex flex-col xl:w-2/5 space-y-6">
+                        <p class="lg:text-3xl text-2xl font-semibold ">So You Can Build Something Like This!</p>
+                        <p>Contoh di samping merupakan hasil implemplentasi Javascript pada website yang menampilkan informasi seputas kopi, yang dimana dengan penggunaan JS informasi yang disampaikan menjadi lebih menarik</p>
+                        <div class="flex xflex-row lg:text-center justify-evenly rounded-lg">
+                            <a href="https://www.sliderrevolution.com/" class="xl:p-5 p-2 rounded-md shadow-lg text-[#F8FAFC] bg-[#BCCCDC] text-lg">Take Me there!</a>
+                            <a href="https://www.sliderrevolution.com/design/cool-javascript-animations/" class="xl:p-5 p-2 rounded-md shadow-lg text-[#F8FAFC] bg-[#BCCCDC] text-lg">Discover More Animation!</a>
+                        </div>
+                    </div>
+                    <div class="xl:w-3/5 h-[24pc] bg-contain  bg-center bg-no-repeat" style="background-image: url('https://www.sliderrevolution.com/wp-content/uploads/2021/09/coffee_gif.gif');"></div>
+                </div>
+                <!-- <div class="mx-8 xl:mx-0 flex-col space-y-4">
+                    <p class="lg:text-3xl text-2xl font-semibold ">CSS Framework</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in laborum exercitationem eius soluta illo commodi aut placeat qui ad sequi sunt voluptas distinctio nulla fugiat, rerum dolorum! Perspiciatis pariatur, omnis dignissimos cum laborum veritatis placeat non nam deserunt deleniti ullam nihil expedita tempore. Corporis repellat labore quae eius nam vitae velit atque illum harum consectetur ut deserunt suscipit adipisci iusto, ea obcaecati aut a veritatis animi laboriosam, pariatur aliquid tempore reprehenderit assumenda? Eum, iste animi! Expedita, quae quas? Error, ea iste quaerat similique, delectus reiciendis incidunt debitis atque corrupti tempora officia a! Accusantium recusandae vero, eligendi velit maxime nulla.</p>
                 </div>
+                <div class="h-96 bg-contain bg-center bg-no-repeat" style="background-image: url('https://api.reliasoftware.com/uploads/javascript_frameworks_3c18455907.webp')"></div>
+                 <div class="lg:grid lg:grid-cols-3 flex flex-col space-y-6 lg:space-y-0">
+                    <div class="flex flex-col text-center shadow-lg mx-8 p-6 rounded-xl hover:bg-sky-50">
+                        <div class="h-[120px] w-[220px] bg-cover bg-center bg-no-repeat mx-auto" style="background-image: url('https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/05/02024759/tailwind-css7675.logowik.com.webp');"></div>
+                        <p class="lg:text-[24px] text-xl mb-4">Tailwind CSS</p>
+                        <p class="mx-6 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, consequatur minus aliquid possimus hic perferendis? Totam aspernatur cum possimus enim. </p>
+                    </div>
+                    <div class="flex flex-col text-center shadow-lg mx-8 p-6 rounded-xl hover:bg-sky-50">
+                        <div class="h-[120px] w-[220px] bg-contain bg-no-repeat mx-auto " style="background-image: url('assets/bs.png');"></div>
+                        <p class="lg:text-[24px] text-xl mb-4">Boostrap</p>
+                        <p class="mx-6 text-justify text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aspernatur pariatur cum consectetur dolore quisquam ut assumenda, cumque animi distinctio?</p>
+                    </div>
+                    <div class="flex flex-col text-center shadow-lg mx-8 p-6 rounded-xl hover:bg-sky-50">
+                        <div class="h-[120px] w-[220px] bg-contain bg-no-repeat mx-auto " style="background-image: url('assets/uikit.png');"></div>
+                        <p class="lg:text-[24px] text-xl mb-4">UIKIT</p>
+                        <p class="mx-6 text-justify text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aspernatur pariatur cum consectetur dolore quisquam ut assumenda, cumque animi distinctio?</p>
+                    </div>
+                 </div> -->
+                 <div class="flex flex-col">
+                    <div class="xl:h-[30pc] h-[12pc] bg-contain bg-center md:bg-repeat bg-no-repeat rounded-lg" style="background-image: url('https://api.reliasoftware.com/uploads/javascript_frameworks_3c18455907.webp');"></div>
+                    <div class="flex flex-col  xl:py-[3pc]">
+                        <p class="lg:text-3xl text-2xl font-semibold">Javascript Framework</p>
+                        <p>Javascript Juga memiliki framework framework yang dapat mempermudah dalam pengimplementasiannya, framework JS berisi struktur struktur dasar dan juga template sehingga dalam pengembangan nya developer tidak perlu membuat struktur Javascript dari awal, terdapat banyak pilihan framwork Javascript yang dapat digunakan berdasarkan keperluan dan juga keinginan para developer, 3 contoh diantara nya adalah React JS, Vue Js dan Node JS.</p>
+                    </div>
+                    <div class="flex flex-row justify-center space-x-12 rounded-xl p-10">
+                        <button onclick="openReact()" class="bg-contain bg-no-repeat bg-center h-[10pc] w-[10pc] p-8 rounded-md hover:scale-125 focus:scale-125" style="background-image: url('assets/react.png');"></button>
+                        <button onclick="openVue()" class="bg-contain bg-no-repeat bg-center h-[10pc] w-[10pc] p-8 rounded-md hover:scale-125 focus:scale-125" style="background-image: url('assets/vue.jpg');"></button>
+                        <button onclick="openNode()" class="bg-contain bg-no-repeat bg-center h-[10pc] w-[10pc] p-8 rounded-md hover:scale-125 focus:scale-125" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg');"></button>
+                    </div>
+                    <div id="react" class="flex flex-col-reverse mt-8 space-y-4 p-6 rounded-lg shadow-lg hidden">
+                        <div class="flex lg:flex-row flex-col-reverse xl:h-[13pc]">
+                            <div class="flex flex-col space-y-6 xl:w-2/3">
+                                <p class="text-3xl font-semibold">React Js Framework</p>
+                                <p>React Js merupakan framework Javascript yang dikembangkan oleh Facebook untuk menunjang fitur antarmuka pengguna, salah satu keunggulan dari react Js adalah sifatnya yang sangat fleksibel sehingga cocok untuk semua penggunaan.React Js juga mendukung fitur Virtual DOM sehingga react hanya memperbaruhi bagian yang berubah saja tanpa memperbaharui semua halaman sehingga meningkatkan efisiensi.</p>
+                            </div>
+                            <div class="bg-contain bg-no-repeat bg-center xl:w-1/3 h-[10pc]" style="background-image: url('assets/react.png');"></div>
+                        </div>
+                    </div>
+                    <div id="vuejs" class="flex flex-col-reverse mt-8 space-y-4 p-6 rounded-lg shadow-lg hidden">
+                        <div class="flex lg:flex-row flex-col-reverse xl:h-[12pc]">
+                            <div class="flex flex-col space-y-6 xl:w-2/3">
+                                <p class="text-3xl font-semibold">Vue Js Framework</p>
+                                <p>Vue Js adalah frameworks JS yang bersifat prograsif yang memberikan fleksibilitas untuk membangun aplikasi dengan antarmuka pengguna yang dinamis, keunggulan yang dimiliki framework ini yaitu Ekosistem yang kuat serta tingkat kinerja yang tinggi dan pendekatan berbasis komponen, menjadikan nya framework yang cocok untuk berbagai jenis kebutuhan.</p>
+                            </div>
+                            <div class="bg-contain bg-no-repeat bg-center xl:w-1/3 h-[10pc]" style="background-image: url('assets/vue.jpg');"></div>
+                        </div>
+                    </div>
+                    <div id="nodejs" class="flex flex-col-reverse mt-8 space-y-4 p-6 rounded-lg shadow-lg hidden">
+                        <div class="flex lg:flex-row flex-col-reverse xl:h-[12pc]">
+                            <div class="flex flex-col space-y-6 xl:w-2/3">
+                                <p class="text-3xl font-semibold">Node Js Framework</p>
+                                <p>Walaupun bukan merupkan frameworks js yang bersifat antarmuka, Node JS adalah framework js yang dikembangkan untuk sisi server sehingga memungkinkan developer untuk menjalankan Javascript diluar browser.Node Js dikembangkan menggunakan mesin V8 yang dimilki oleh Google sehingga membuatnya sangat efisien dan ringan. </p>
+                            </div>
+                            <div class="bg-contain bg-no-repeat bg-center xl:w-1/3 h-[10pc]" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg');"></div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="flex flex-col  items-center h-[25pc] ">
+                        <div class="flex flex-row space-x-10">
+                            <div class="bg-contain bg-no-repeat bg-center w-1/5 h-[15pc] p-8 rounded-md" style="background-image: url('assets/react.png');"></div>
+                            <div class="w-4/5 flex h-[15pc] ">
+                                <div class="flex flex-col my-auto">
+                                    <p class="text-3xl font-semibold">React JS</p>
+                                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ad provident at dolorem sint itaque asperiores natus obcaecati eius quae veniam aperiam distinctio alias suscipit tenetur dolor qui necessitatibus blanditiis vel cum facere cupiditate voluptatem voluptatibus vero. Cupiditate nam, nulla autem odio asperiores delectus sint velit hic, repudiandae, natus voluptas.</p>
+                                    <div class="flex flex-row mt-5">
+                                        <a href="https://react.dev/" target="_blank" class="py-3 px-4  rounded-xl">go to react</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                     </div> -->
+                 </div>
+
+                <!-- <div class="flex flex-col shadow-lg mx-[5pc] px-[5pc] py-[3pc] space-y-8">
+                    <p class="lg:text-3xl font-semibold">Javascript Frameworks</p>
+                    <div class="h-[380px] bg-contain bg-no-repeat bg-center" style="background-image: url('https://api.reliasoftware.com/uploads/javascript_frameworks_3c18455907.webp');"></div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nulla minus, harum incidunt enim nam architecto. Provident, sit tempora eos explicabo atque iusto cumque adipisci aspernatur perferendis optio, rerum aperiam.</p>
+                </div> -->
             </div>
 
         </div>
+        <div class="bg-[#0B192C] flex flex-col space-y-6 p-12 text-white mt-[5pc]" id="footer">
+            <div class="flex flex-col">
+                <p class="text-3xl">Rio Candra Indrawan</p>
+                <p class="text-sm">CCI Web Dev Mini Task </p>
+                <p class="text-sm">Pembuatan article tentang HTML, CSS dan Javascriptr</p>
+            </div>
+            <div class="flex flex-row mx-auto xl:space-x-24 space-x-8 fa-2xl">
+                <a href="https://www.instagram.com/riocandzh/" class="flex flex-col space-y-2 hover:scale-125">
+                    <i class="fa-brands fa-instagram mx-auto"></i>
+                    <p class="text-sm">Instagram</p>
+                </a>
+                <a href="https://github.com/RioCandra62" class="flex flex-col space-y-2 hover:scale-125">
+                    <i class="fa-brands fa-github  mx-auto"></i>
+                    <p class="text-sm">GitHub</p>
+                </a>
+                <a href="https://www.linkedin.com/in/rio-candra-indrawan-851061262/" class="flex flex-col space-y-2 hover:scale-125">
+                    <i class="fa-brands fa-linkedin  mx-auto"></i>
+                    <p class="text-sm">LinkedIn</p>
+                </a>
+  
+            </div>
+            
+        </div>
+        <div class="bg-black py-1">
+            <p class="text-sm text-white text-center">Copyright &copy 2024 RioCandra </p>
+        </div>
     </div>
+    <script>
+        react = document.getElementById('react');
+        vuejs = document.getElementById('vuejs');
+        nodejs = document.getElementById('nodejs'); 
+        function openReact(){
+            react.classList.remove('hidden');
+            vuejs.classList.add('hidden');
+            nodejs.classList.add('hidden');
+        }
+        function openVue(){
+            vuejs.classList.remove('hidden');
+            react.classList.add('hidden');
+            nodejs.classList.add('hidden');
+        }
+        function openNode(){
+            nodejs.classList.remove('hidden');
+            react.classList.add('hidden');
+            vuejs.classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
